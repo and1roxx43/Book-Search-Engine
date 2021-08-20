@@ -1,21 +1,9 @@
 import { gql } from "@apollo/client";
 
 export const LOGIN_USER = gql`
-   mutation login($email: String!, $password: String!) {
-       login(email: $email, password: $password) {
-           token
-           user {
-               _id
-               username
-           }
-       }
-   }
-`;
-
-export const ADD_USER = gql`
-    mutation addUser($username: String!, $email: String!, $password: String!) {
-        addUser(username: $username, email: $email, password: $password) {
-            token,
+    mutation login($email: String!, $password: String!) {
+        login(email: $email, password: $password) {
+            token
             user {
                 _id
                 username
@@ -24,41 +12,50 @@ export const ADD_USER = gql`
     }
 `;
 
-export const SAVE_BOOK = gql`
-mutation saveBook($book: savedBooks!) {
-    saveBook(book: $book) {
-        usermname
-        email
-        bookCount
-        savedBooks {
-            authors
-            description
-            title
-            bookId
-            image
-            link
-        }
-    }
-}
+export const ADD_USER = gql`
+ mutation addUser($username: String!, $email: String!, $password: String!) {
+     addUser(username: $username, email: $email, password: $password) {
+         token
+         user {
+             _id
+             username
+         }
+     }
+ }
 `;
 
-export const REMOVE_BOOK = gql`
-mutation removeBook($bookId: ID!) {
-    removeBook(bookId: $bookId) {
-        _id
+export const SAVE_BOOK = gql`
+ mutation saveBook($bookData: BookInput!) {
+     saveBook(bookData: $bookData) {
         username
         email
         bookCount
         savedBooks {
+            bookId
+            title
             authors
             description
-            title
-            bookId
             image
             link
         }
-    }
-}
+     }
+ }
 `;
 
-
+export const REMOVE_BOOK = gql`
+    mutation removeBOOK($bookId: String!) {
+        removeBook(bookId: $bookId) {
+            username
+            email
+            bookCount
+            savedBooks {
+                bookId
+                title
+                authors
+                description
+                image
+                link
+            }
+        }
+    }
+`;
