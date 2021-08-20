@@ -22,7 +22,7 @@ const userData = data?.me || {};
 
     try {
     await removeBook({
-        variables: { bookId: bookId},
+        variables: { bookId: bookId}
     });
 
       removeBookId(bookId);
