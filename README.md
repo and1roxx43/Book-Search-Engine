@@ -1,4 +1,6 @@
 # Project Name: Book-Search-Engine
+___
+![license](https://img.shields.io/badge/License-MIT%202.0-blue.svg)
 
 ## Overview
 In this assignment the task is to refactor a RESTful API into a GraphQL API built with Apollo Server.
