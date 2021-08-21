@@ -35,6 +35,12 @@ GIVEN a book search engine
 - THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button  
 
 ## Screenshots
+- Landing page
+![landing-page](https://user-images.githubusercontent.com/14179472/130325364-2645ea97-0d34-4817-b499-dc099c2c56f4.png)
+- Book search
+![page2](https://user-images.githubusercontent.com/14179472/130325410-a4af6d05-b865-462b-826a-44aa4367f3d2.png)
+- Saved Books
+![saved-books](https://user-images.githubusercontent.com/14179472/130325448-bd0672c3-b1d7-4c6a-a025-0ebb6819de7a.png)
 
 
 ## URL 
